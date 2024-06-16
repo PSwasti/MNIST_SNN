@@ -18,3 +18,6 @@ model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['
 # Adam is an Optimization algo, sparse_categorical_crossentropy is a loss function, metric is for performance and accuracy gives proportion of correct o/p (predictions) over total o/p
 model.fit(x_train, y_train, epochs=5, batch_size=32, validation_split=0.2)
 # 5 passes, and 20% of the set for validation
+test_loss, test_acc = model.evaluate(x_test, y_test)
+print('Test accuracy:', test_acc)
+print('Test loss:', test_loss)
